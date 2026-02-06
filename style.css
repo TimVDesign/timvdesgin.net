@@ -3,7 +3,7 @@ Header {
 }
 Body {
   Background-color: black;
-  Background-image: "./ACNH wallpaper.jpg"
+  Background-image: URL("./ACNH wallpaper.jpg")
 }
 Footer {
   Background-color: powderblue;
