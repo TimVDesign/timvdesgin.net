@@ -1,4 +1,4 @@
-Heaader {
+Header {
   Background-color: powderblue;
 }
 Body {
@@ -6,4 +6,8 @@ Body {
 }
 Footer {
   Background-color: powderblue;
+}
+
+h1 {
+  color: blueviolet;
 }
