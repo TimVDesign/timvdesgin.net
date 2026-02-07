@@ -10,6 +10,18 @@ Body {
   Color: white;
 }
 
+#cursorToggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 60px;        /* pas aan naar smaak */
+  height: auto;
+
+  cursor: pointer;
+  z-index: 1000;      /* zodat ’ie boven alles blijft */
+}
+
 Footer {
   Background-color: powderblue;
 }
