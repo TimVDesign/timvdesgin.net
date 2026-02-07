@@ -1,6 +1,6 @@
 #Title {
-  -webkit-text-fill-color: pink;
-  fill-opacity: 20%;
+  background-color: pink;
+  opacity: 0.2;
 }
 Body {
   Background-image: URL("ACNH wallpaper.jpg")
