@@ -4,7 +4,7 @@ Body {
 }
 
 #Title {
-  background-color: pink;
+  /*background-color: pink;*/
   display: inline-block;
   opacity: 0.2;
   Color: white;
@@ -16,4 +16,8 @@ Footer {
 
 h1 {
   color: blueviolet;
+}
+
+.custom-cursor {
+  cursor: url("Star net.png") 16 16, auto;
 }
