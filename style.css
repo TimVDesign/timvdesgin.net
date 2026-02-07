@@ -1,10 +1,14 @@
-#Title {
-  -webkit-text-fill-color: pink;
-  opacity: 0.2;
-}
+
 Body {
   Background-image: URL("ACNH wallpaper.jpg")
 }
+
+#Title {
+  background-color: pink;
+  display: inline-block;
+  opacity: 0.2;
+}
+
 Footer {
   Background-color: powderblue;
 }
