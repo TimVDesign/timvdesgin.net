@@ -27,6 +27,18 @@ Body {
   z-index: 1000;      /* zodat ’ie boven alles blijft */
 }
 
+#cursorToggleFish {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+
+  width: 200px;        /* pas aan naar smaak */
+  height: auto;
+
+  cursor: pointer;
+  z-index: 1000;      /* zodat ’ie boven alles blijft */
+}
+
 Footer {
   Background-color: powderblue;
 }
@@ -36,6 +48,8 @@ h1 {
 }
 
 body.custom-cursor {
-  cursor: url("Star net.png") 16 16, auto;
+  cursor: url("Star net.png") 10 10, auto;
 }
-
+body.custom-cursor-fish {
+  cursor: url("Vissen hengel.png") 10, 10, auto;
+}
