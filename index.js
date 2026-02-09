@@ -397,7 +397,7 @@ function handleEndGame() {
     //data to display to score board
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
-    document.getElementById('grade-percentage').innerHTML = playerGrade
+    //document.getElementById('grade-percentage').innerHTML = playerGrade
    /*document.getElementById('wrong-answers').innerHTML = wrongAttempt
    // document.getElementById('right-answers').innerHTML = playerScore*/
     document.getElementById('score-modal').style.display = "flex"
@@ -458,7 +458,7 @@ function maybeHideNee() {
     const optionBSpan = optionBRadio.parentElement
 
     // zodra Ja dominant wordt
-    if (jaScaleY >= 8 || jaScaleX >= 8) {
+    if (jaScaleY >= 6 || jaScaleX >= 6) {
         optionBSpan.style.opacity = "0"
         optionBSpan.style.pointerEvents = "none"
         optionBSpan.style.transition = "opacity 0.3s ease"
