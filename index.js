@@ -380,15 +380,15 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    if (playerScore <= 3) {
+    if (playerScore <= 2) {
         remark = "Toch best lastige vragen he!"
         remarkColor = "red"
     }
-    else if (playerScore >= 4) {
+    else if (playerScore >= 3) {
         remark = "Zoheeeeeee bijna alles goed!"
         remarkColor = "orange"
     }
-    else if (playerScore >= 5) {
+    else if (playerScore >= 4) {
         remark = "Je weet ook echt alles he!?"
         remarkColor = "green"
     }
