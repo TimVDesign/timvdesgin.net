@@ -402,12 +402,25 @@ const optionARadio = document.getElementById("option-one")
 const optionBRadio = document.getElementById("option-two")
 const optionALabel = document.getElementById("option-one-label")
 
-optionBRadio.addEventListener("change", () => {
-    if (indexNumber === 4 && optionBRadio.checked) {
-        optionALabel.style.transform = "scale(2)"
-        optionALabel.style.transition = "transform 0.3s ease"
+const optionASpan = document.getElementById("option-one").parentElement
+
+let jaScale = 1
+
+optionBRadio.addEventListener("click", () => {
+    if (indexNumber === 4) {
+        jaScale += 0.4   // elke klik groter
+        optionASpan.style.transform = `scale(${jaScale})`
+        optionASpan.style.transition = "transform 0.3s ease"
+        optionASpan.style.zIndex = "10"
+        if (jaScale >= 3) {
+            optionASpan.style.position = "absolute"
+            optionASpan.style.left = "0"
+            optionASpan.style.right = "0"
+        }
+
     }
 })
+
 
 
 function resetOptionBackground() {
@@ -416,6 +429,7 @@ function resetOptionBackground() {
         document.getElementById(option.labels[0].id).style.backgroundColor = ""
     })
 
-    // reset grootte van optie A
-    document.getElementById("option-one-label").style.transform = "scale(1)"
+    jaScale = 1
+    const optionASpan = document.getElementById("option-one").parentElement
+    optionASpan.style.transform = "scale(1)"
 }
