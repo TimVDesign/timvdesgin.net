@@ -380,15 +380,15 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    if (playerScore <= 2) {
+    if (playerScore <= 1) {
         remark = "Toch best lastige vragen he!"
         remarkColor = "red"
     }
-    else if (playerScore >= 3) {
+    else if (playerScore >= 2) {
         remark = "Zoheeeeeee bijna alles goed!"
         remarkColor = "orange"
     }
-    else if (playerScore >= 4) {
+    else if (playerScore >= 3) {
         remark = "Je weet ook echt alles he!?"
         remarkColor = "green"
     }
@@ -398,9 +398,9 @@ function handleEndGame() {
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
     document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('score-modal').style.display = "flex"
+    //document.getElementById('wrong-answers').innerHTML = wrongAttempt
+    //document.getElementById('right-answers').innerHTML = playerScore
+    //document.getElementById('score-modal').style.display = "flex"
 
 }
 
