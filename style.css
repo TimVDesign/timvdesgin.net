@@ -99,6 +99,9 @@ input[type="radio"] {
     display: none;
 }
 
+.option {
+    background-color: #ffffff; /* of wat je nu gebruikt */
+}
 
 input[type=radio]:checked ~ .option {
     background: paleturquoise;

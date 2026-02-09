@@ -436,18 +436,30 @@ optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
 
         // vermenigvuldigen per klik
-        jaScaleX *= 2.5
-        jaScaleY *= 4
+        jaScaleX *= 1.25
+        jaScaleY *= 2
 
         // veiligheidslimieten (belangrijk!)
-        jaScaleX = Math.min(jaScaleX, 5)
-        jaScaleY = Math.min(jaScaleY, 8)
+        jaScaleX = Math.min(jaScaleX, 4)
+        jaScaleY = Math.min(jaScaleY, 6)
 
         optionASpan.style.transform =
             `scale(${jaScaleX}, ${jaScaleY})`
+
+            //maybeHideNee()
     }
 })
 
+function maybeHideNee() {
+    const optionBSpan = optionBRadio.parentElement
+
+    // zodra Ja dominant wordt
+    if (jaScaleY >= 4 || jaScaleX >= 3) {
+        optionBSpan.style.opacity = "0"
+        optionBSpan.style.pointerEvents = "none"
+        optionBSpan.style.transition = "opacity 0.3s ease"
+    }
+}
 
 
 
@@ -461,6 +473,10 @@ function resetOptionBackground() {
     jaScaleX = 1
     jaScaleY = 1
     optionASpan.style.transform = "scale(1, 1)"
+
+    const optionBSpan = optionBRadio.parentElement
+    optionBSpan.style.opacity = "1"
+    optionBSpan.style.pointerEvents = "auto"
 }
 
 
