@@ -380,19 +380,19 @@ function handleEndGame() {
     let remarkColor = null
 
     // condition check for player remark and remark color
-    if (playerScore <= 3) {
-        remark = "Bad Grades, Keep Practicing."
+    if (playerScore <= 2) {
+        remark = "Toch best lastige vragen he!"
         remarkColor = "red"
     }
-    else if (playerScore >= 4 && playerScore < 7) {
-        remark = "Average Grades, You can do better."
+    else if (playerScore >= 3 {
+        remark = "Zoheeeeeee bijna alles goed!"
         remarkColor = "orange"
     }
     else if (playerScore >= 7) {
-        remark = "Excellent, Keep the good work going."
+        remark = "Je weet ook echt alles he!?"
         remarkColor = "green"
     }
-    const playerGrade = (playerScore / 10) * 100
+    const playerGrade = (playerScore / 5) * 100
 
     //data to display to score board
     document.getElementById('remarks').innerHTML = remark

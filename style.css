@@ -91,7 +91,7 @@ span label:hover{
     -ms-transform: scale(1.12);
     -webkit-transform: scale(1.12);
     transform: scale(1.12);
-    color: white;
+    color: rgb(207, 8, 148);
 }
 
 input[type="radio"] {
