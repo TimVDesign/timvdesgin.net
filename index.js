@@ -9,39 +9,37 @@ const questions = [
     },
 
     {
-        question: "How many players are allowed on a soccer pitch ?",
-        optionA: "10 players",
-        optionB: "11 players",
-        optionC: "9 players",
-        optionD: "12 players",
+        question: "Hoeveel dates in Zwolle hebben we gehad?",
+        optionA: "3",
+        optionB: "4",
+        optionC: "5",
+        optionD: "6",
+        correctOption: "optionD"
+    },
+
+    {
+        question: "Hoeveel stroopwafels zitten in een (AH huismerk) pak stroopwafels?",
+        optionA: "8",
+        optionB: "10",
+        optionC: "12",
+        optionD: "13",
         correctOption: "optionB"
     },
 
     {
-        question: "Who was the first President of USA ?",
-        optionA: "Donald Trump",
-        optionB: "Barack Obama",
-        optionC: "Abraham Lincoln",
-        optionD: "George Washington",
-        correctOption: "optionD"
-    },
-
-    {
-        question: "30 days has ______ ?",
-        optionA: "January",
-        optionB: "December",
-        optionC: "June",
-        optionD: "August",
+        question: "Welke van deze trading cards heb ik niet?",
+        optionA: "One Piece",
+        optionB: "Riftbound",
+        optionC: "Magic the gathering",
+        optionD: "Riftbound",
         correctOption: "optionC"
     },
 
     {
-        question: "How manay hours can be found in a day ?",
-        optionA: "30 hours",
-        optionB: "38 hours",
-        optionC: "48 hours",
-        optionD: "24 hours",
-        correctOption: "optionD"
+        question: "Wil jij mijn valentijn zijn?",
+        optionA: "Ja",
+        optionB: "Nee",
+        correctOption: "optionA"
     },
 
     {
@@ -233,7 +231,7 @@ let shuffledQuestions = [] //empty array to hold shuffled selected questions out
 function handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
 //app would be dealing with 10questions per session
-    while (shuffledQuestions.length <= 9) {
+    while (shuffledQuestions.length <= 5) {
         const random = questions[Math.floor(Math.random() * questions.length)]
         if (!shuffledQuestions.includes(random)) {
             shuffledQuestions.push(random)
@@ -315,7 +313,7 @@ function handleNextQuestion() {
     unCheckRadioButtons()
     //delays next question displaying for a second just for some effects so questions don't rush in on player
     setTimeout(() => {
-        if (indexNumber <= 9) {
+        if (indexNumber <= 5) {
 //displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
             NextQuestion(indexNumber)
         }
