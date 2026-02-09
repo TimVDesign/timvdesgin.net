@@ -402,9 +402,6 @@ const optionARadio = document.getElementById("option-one")
 const optionBRadio = document.getElementById("option-two")
 const optionALabel = document.getElementById("option-one-label")
 
-const optionBRadio = document.getElementById("option-two")
-const optionALabel = document.getElementById("option-one-label")
-
 optionBRadio.addEventListener("change", () => {
     if (indexNumber === 4 && optionBRadio.checked) {
         optionALabel.style.transform = "scale(2)"
