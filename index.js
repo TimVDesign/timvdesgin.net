@@ -321,20 +321,42 @@ function checkForAnswer() {
 
 //called when the next button is called
 function handleNextQuestion() {
-    checkForAnswer() //check if player picked right or wrong option
+
+    // 🔒 SPECIAL CASE: vraag 5
+    if (indexNumber === 4) {
+
+        // Alleen doorgaan als JA is gekozen
+        if (!optionARadio.checked) {
+            // doe niks: geen rood/groen, geen modal
+            return
+        }
+
+        // Ja is gekozen → NU pas checken
+        checkForAnswer()
+        unCheckRadioButtons()
+
+        setTimeout(() => {
+            handleEndGame()
+            resetOptionBackground()
+        }, 1000)
+
+        return
+    }
+
+    // 🟢 NORMAAL GEDRAG voor andere vragen
+    checkForAnswer()
     unCheckRadioButtons()
-    //delays next question displaying for a second just for some effects so questions don't rush in on player
+
     setTimeout(() => {
         if (indexNumber <= 5) {
-//displays next question as long as index number isn't greater than 9, remember index number starts from 0, so index 9 is question 10
             NextQuestion(indexNumber)
-        }
-        else {
-            handleEndGame()//ends game if index number greater than 9 meaning we're already at the 10th question
+        } else {
+            handleEndGame()
         }
         resetOptionBackground()
-    }, 1000);
+    }, 1000)
 }
+
 
 //sets options background back to null after display the right/wrong colors
 function resetOptionBackground() {
@@ -404,32 +426,31 @@ const optionALabel = document.getElementById("option-one-label")
 
 const optionASpan = document.getElementById("option-one").parentElement
 
-let jaScale = 1
-
+let jaScaleX = 1
 let jaScaleY = 1
-
-// vaste origin zodat hij naar boven/beneden groeit
-optionASpan.style.transformOrigin = "center center"
-optionASpan.style.transition = "transform 0.25s ease"
 
 optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
-        jaScaleY += 0.3           // elke klik groter
-        optionASpan.style.transform = `scaleY(${jaScaleY})`
+        jaScaleX = Math.min(2, jaScaleX + 0.25)   // max 2x breed
+        jaScaleY = Math.min(5, jaScaleY + 0.8)    // max 5x hoog
+
+        optionASpan.style.transform = 
+            `scale(${jaScaleX}, ${jaScaleY})`
     }
 })
 
 
 
+
 function resetOptionBackground() {
-    const options = document.getElementsByName("option");
+    const options = document.getElementsByName("option")
     options.forEach((option) => {
         document.getElementById(option.labels[0].id).style.backgroundColor = ""
     })
 
-    // reset Ja-knop
+    jaScaleX = 1
     jaScaleY = 1
-    const optionASpan = document.getElementById("option-one").parentElement
-    optionASpan.style.transform = "scaleY(1)"
+    optionASpan.style.transform = "scale(1, 1)"
 }
+
 
