@@ -435,7 +435,7 @@ optionASpan.style.transition = "transform 0.3s ease"
 optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
         // vermenigvuldigen per klik
-        jaScaleX *= 1.25
+        jaScaleX *= 2
         jaScaleY *= 2
 
         // veiligheidslimieten
@@ -458,7 +458,7 @@ function maybeHideNee() {
     const optionBSpan = optionBRadio.parentElement
 
     // zodra Ja dominant wordt
-    if (jaScaleY >= 4 || jaScaleX >= 3) {
+    if (jaScaleY >= 8 || jaScaleX >= 8) {
         optionBSpan.style.opacity = "0"
         optionBSpan.style.pointerEvents = "none"
         optionBSpan.style.transition = "opacity 0.3s ease"
