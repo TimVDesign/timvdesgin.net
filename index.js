@@ -373,7 +373,6 @@ function unCheckRadioButtons() {
         options[i].checked = false;
     }
 }
-
 // function for when all questions being answered
 function handleEndGame() {
     let remark = null
