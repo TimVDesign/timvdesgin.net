@@ -398,9 +398,9 @@ function handleEndGame() {
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
     document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('score-modal').style.display = "flex"
+   // document.getElementById('wrong-answers').innerHTML = wrongAttempt
+   // document.getElementById('right-answers').innerHTML = playerScore
+   // document.getElementById('score-modal').style.display = "flex"
 
 }
 
