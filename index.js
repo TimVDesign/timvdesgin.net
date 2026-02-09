@@ -398,9 +398,9 @@ function handleEndGame() {
     document.getElementById('remarks').innerHTML = remark
     document.getElementById('remarks').style.color = remarkColor
     document.getElementById('grade-percentage').innerHTML = playerGrade
-   // document.getElementById('wrong-answers').innerHTML = wrongAttempt
-   // document.getElementById('right-answers').innerHTML = playerScore
-   // document.getElementById('score-modal').style.display = "flex"
+   /*document.getElementById('wrong-answers').innerHTML = wrongAttempt
+   // document.getElementById('right-answers').innerHTML = playerScore*/
+    document.getElementById('score-modal').style.display = "flex"
 
 }
 
@@ -434,20 +434,26 @@ optionASpan.style.transition = "transform 0.3s ease"
 
 optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
-
         // vermenigvuldigen per klik
         jaScaleX *= 1.25
         jaScaleY *= 2
 
-        // veiligheidslimieten (belangrijk!)
+        // veiligheidslimieten
         jaScaleX = Math.min(jaScaleX, 4)
         jaScaleY = Math.min(jaScaleY, 6)
 
-        optionASpan.style.transform =
-            `scale(${jaScaleX}, ${jaScaleY})`
+        optionASpan.style.transform = `scale(${jaScaleX}, ${jaScaleY})`
 
-            //maybeHideNee()
+        // Check of Nee verdwijnt
+        maybeHideNee()
+
+        // deselect Nee radio als Ja groeit
+        if (jaScaleX > 1 || jaScaleY > 1) {
+            optionBRadio.checked = false
+        }
     }
+})
+
 })
 
 function maybeHideNee() {
