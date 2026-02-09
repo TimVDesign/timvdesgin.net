@@ -1,11 +1,11 @@
 const questions = [
     {
-        question: "How many days makes a week ?",
-        optionA: "10 days",
-        optionB: "14 days",
-        optionC: "5 days",
-        optionD: "7 days",
-        correctOption: "optionD"
+        question: "Wanneer hebben we elkaar ontmoet?",
+        optionA: "8 september",
+        optionB: "19 september",
+        optionC: "8 oktober",
+        optionD: "19 oktober",
+        correctOption: "optionA"
     },
 
     {
