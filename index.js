@@ -384,11 +384,11 @@ function handleEndGame() {
         remark = "Toch best lastige vragen he!"
         remarkColor = "red"
     }
-    else if (playerScore >= 3 {
+    else if (playerScore >= 3) {
         remark = "Zoheeeeeee bijna alles goed!"
         remarkColor = "orange"
     }
-    else if (playerScore >= 7) {
+    else if (playerScore >= 4) {
         remark = "Je weet ook echt alles he!?"
         remarkColor = "green"
     }
