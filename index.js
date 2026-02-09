@@ -429,15 +429,25 @@ const optionASpan = document.getElementById("option-one").parentElement
 let jaScaleX = 1
 let jaScaleY = 1
 
+optionASpan.style.transformOrigin = "left bottom"
+optionASpan.style.transition = "transform 0.3s ease"
+
 optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
-        jaScaleX = Math.min(2, jaScaleX + 0.25)   // max 2x breed
-        jaScaleY = Math.min(5, jaScaleY + 0.8)    // max 5x hoog
 
-        optionASpan.style.transform = 
+        // vermenigvuldigen per klik
+        jaScaleX *= 2.5
+        jaScaleY *= 4
+
+        // veiligheidslimieten (belangrijk!)
+        jaScaleX = Math.min(jaScaleX, 5)
+        jaScaleY = Math.min(jaScaleY, 8)
+
+        optionASpan.style.transform =
             `scale(${jaScaleX}, ${jaScaleY})`
     }
 })
+
 
 
 
