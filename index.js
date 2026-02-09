@@ -410,7 +410,7 @@ function closeScoreModal() {
     playerScore = 0
     wrongAttempt = 0
     indexNumber = 0
-    questions = []
+    //questions = []
     NextQuestion(indexNumber)
     document.getElementById('score-modal').style.display = "none"
 }
