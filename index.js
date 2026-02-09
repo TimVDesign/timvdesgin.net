@@ -427,7 +427,9 @@ function resetOptionBackground() {
         document.getElementById(option.labels[0].id).style.backgroundColor = ""
     })
 
-    jaScale = 1
+    // reset Ja-knop
+    jaScaleY = 1
     const optionASpan = document.getElementById("option-one").parentElement
-    optionASpan.style.transform = "scale(1)"
+    optionASpan.style.transform = "scaleY(1)"
 }
+
