@@ -40,7 +40,7 @@ const questions = [
         optionA: "Ja",
         optionB: "Nee",
         correctOption: "optionA"
-    },
+    }/*,
 
     {
         question: "Which is the longest river in the world ?",
@@ -221,12 +221,12 @@ const questions = [
         optionC: "32",
         optionD: "36",
         correctOption: "optionC"
-    }
+    }*/
 
 ]
 
 
-let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
+/*let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
 
 function handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
@@ -237,7 +237,7 @@ function handleQuestions() {
             shuffledQuestions.push(random)
         }
     }
-}
+}*/
 
 
 let questionNumber = 1 //holds the current question number
@@ -248,8 +248,8 @@ let indexNumber = 0 //will be used in displaying next question
 // function for displaying next question in the array to dom
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
-    handleQuestions()
     const currentQuestion = questions[index]
+
     document.getElementById("question-number").innerHTML = questionNumber
     document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
@@ -258,11 +258,23 @@ function NextQuestion(index) {
     document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
     document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
 
+    const optionCSpan = document.getElementById("option-three").parentElement
+    const optionDSpan = document.getElementById("option-four").parentElement
+
+    if (index === 4) {
+        optionCSpan.style.display = "none"
+        optionDSpan.style.display = "none"
+    } else {
+        optionCSpan.style.display = "inline-block"
+        optionDSpan.style.display = "inline-block"
+    }
 }
 
 
+
+
 function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] //gets current Question 
+    const currentQuestion = questions[indexNumber] //gets current Question 
     const currentQuestionAnswer = currentQuestion.correctOption //gets current Question's answer
     const options = document.getElementsByName("option"); //gets all elements in dom with name of 'option' (in this the radio inputs)
     let correctOption = null
@@ -384,4 +396,29 @@ function closeScoreModal() {
 //function to close warning modal
 function closeOptionModal() {
     document.getElementById('option-modal').style.display = "none"
+}
+
+const optionARadio = document.getElementById("option-one")
+const optionBRadio = document.getElementById("option-two")
+const optionALabel = document.getElementById("option-one-label")
+
+const optionBRadio = document.getElementById("option-two")
+const optionALabel = document.getElementById("option-one-label")
+
+optionBRadio.addEventListener("change", () => {
+    if (indexNumber === 4 && optionBRadio.checked) {
+        optionALabel.style.transform = "scale(2)"
+        optionALabel.style.transition = "transform 0.3s ease"
+    }
+})
+
+
+function resetOptionBackground() {
+    const options = document.getElementsByName("option");
+    options.forEach((option) => {
+        document.getElementById(option.labels[0].id).style.backgroundColor = ""
+    })
+
+    // reset grootte van optie A
+    document.getElementById("option-one-label").style.transform = "scale(1)"
 }
