@@ -251,7 +251,7 @@ let indexNumber = 0 //will be used in displaying next question
 //also handles displaying players and quiz information to dom
 function NextQuestion(index) {
     handleQuestions()
-    const currentQuestion = shuffledQuestions[index]
+    const currentQuestion = question[index]
     document.getElementById("question-number").innerHTML = questionNumber
     document.getElementById("player-score").innerHTML = playerScore
     document.getElementById("display-question").innerHTML = currentQuestion.question;
