@@ -406,18 +406,16 @@ const optionASpan = document.getElementById("option-one").parentElement
 
 let jaScale = 1
 
+let jaScaleY = 1
+
+// vaste origin zodat hij naar boven/beneden groeit
+optionASpan.style.transformOrigin = "center center"
+optionASpan.style.transition = "transform 0.25s ease"
+
 optionBRadio.addEventListener("click", () => {
     if (indexNumber === 4) {
-        jaScale += 0.4   // elke klik groter
-        optionASpan.style.transform = `scale(${jaScale})`
-        optionASpan.style.transition = "transform 0.3s ease"
-        optionASpan.style.zIndex = "10"
-        if (jaScale >= 3) {
-            optionASpan.style.position = "absolute"
-            optionASpan.style.left = "0"
-            optionASpan.style.right = "0"
-        }
-
+        jaScaleY += 0.3           // elke klik groter
+        optionASpan.style.transform = `scaleY(${jaScaleY})`
     }
 })
 
