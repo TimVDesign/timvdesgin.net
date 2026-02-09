@@ -226,7 +226,7 @@ const questions = [
 ]
 
 
-/*let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
+let shuffledQuestions = [] //empty array to hold shuffled selected questions out of all available questions
 
 function handleQuestions() { 
     //function to shuffle and push 10 questions to shuffledQuestions array
@@ -237,7 +237,7 @@ function handleQuestions() {
             shuffledQuestions.push(random)
         }
     }
-}*/
+}
 
 
 let questionNumber = 1 //holds the current question number
