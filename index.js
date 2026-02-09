@@ -454,8 +454,6 @@ optionBRadio.addEventListener("click", () => {
     }
 })
 
-})
-
 function maybeHideNee() {
     const optionBSpan = optionBRadio.parentElement
 
