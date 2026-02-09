@@ -5,7 +5,7 @@ html, body {
 }
 
 Body {
-  Background-image: URL("ACNH wallpaper.jpg")
+  Background-image: URL("hearts.jpg")
 }
 
 #Title {
@@ -15,29 +15,6 @@ Body {
   Color: white;
 }
 
-#cursorToggle {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-
-  width: 200px;        /* pas aan naar smaak */
-  height: auto;
-
-  cursor: pointer;
-  z-index: 1000;      /* zodat ’ie boven alles blijft */
-}
-
-#cursorToggleFish {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-
-  width: 200px;        /* pas aan naar smaak */
-  height: auto;
-
-  cursor: pointer;
-  z-index: 1000;      /* zodat ’ie boven alles blijft */
-}
 
 Footer {
   Background-color: powderblue;
@@ -45,11 +22,4 @@ Footer {
 
 h1 {
   color: blueviolet;
-}
-
-body.custom-cursor {
-  cursor: url("Star net.png") 10 10, auto;
-}
-body.custom-cursor-fish {
-  cursor: url("Vissen hengel.png") 10, 10, auto;
 }
